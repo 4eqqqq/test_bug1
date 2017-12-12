@@ -27,7 +27,7 @@
       }
     },
     "versionFirst": "4.5.1",
-    "uniqCompNum": 9,
+    "uniqCompNum": 13,
     "versionPublish": "4.5.1"
   },
   "pages": {
@@ -77,13 +77,13 @@
             }
           },
           "_name": "map1",
-          "_customHTML": "<section class=\"map2\" group=\"Maps\" plugins=\"amp-main,amp-iframe\">\n\n    <mbr-parameters>\n    <!-- Block of parameters for component -->\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"6\" step=\"1\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"6\" step=\"1\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n        <input type=\"map\" title=\"Map\" name=\"googleMap\">\n    <!-- End block of parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <div class=\"mbr-row mbr-justify-content-center\">\n            <div class=\"col-md-8\">\n                <div class=\"google-map\" mbr-map=\"googleMap\">\n                <hr>\n                <amp-iframe width=\"200\" height=\"100\" sandbox=\"allow-scripts allow-same-origin\" layout=\"responsive\" src=\"https://www.google.com/maps/embed/v1/place?key=AIzaSyDG9YXIhKBhqclZizcSzJ0ROiE0qgVfwzI&amp;q=europe\">\n                </amp-iframe>\n            </div>\n        </div>\n    </div>\n</div></section>\n",
-          "_cid": "qDzXC3555G",
-          "_anchor": "map1-8",
+          "_customHTML": "<section class=\"map2\" group=\"Maps\" plugins=\"amp-main,amp-iframe\">\n\n    <mbr-parameters>\n    <!-- Block of parameters for component -->\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"6\" step=\"1\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"6\" step=\"1\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n        <input type=\"map\" title=\"Map\" name=\"googleMap\">\n    <!-- End block of parameters -->\n    </mbr-parameters>\n\n    \n<amp-iframe width=\"600\" title=\"Google map pin on Googleplex, Mountain View CA\" height=\"400\" layout=\"responsive\" sandbox=\"allow-scripts allow-same-origin allow-popups\" frameborder=\"0\" src=\"https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ2eUgeAK6j4ARbn5u_wAGqWA&amp;key=AIzaSyCNCZ0Twm_HFRaZ5i-FuPDYs3rLwm4_848\">\n</amp-iframe>\n    <div class=\"container\">\n        <div class=\"mbr-row mbr-justify-content-center\">\n            <div class=\"col-md-8\">\n               <!--  <div class=\"google-map\" mbr-map=\"googleMap\">\n                <hr> -->\n\n            </div>\n        </div>\n    </div>\n</section>\n",
+          "_cid": "qDzYZ5aS3d",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
-          "_params": {}
+          "_params": {},
+          "_anchor": "map1-c"
         },
         {
           "_styles": {
