@@ -27,7 +27,7 @@
       }
     },
     "versionFirst": "4.5.1",
-    "uniqCompNum": 14,
+    "uniqCompNum": 34,
     "versionPublish": "4.5.1"
   },
   "pages": {
@@ -41,28 +41,6 @@
         "html_before": ""
       },
       "components": [
-        {
-          "_styles": {
-            "& when not (@fullScreen)": {
-              "padding-top": "(@paddingTop * 15px)",
-              "padding-bottom": "(@paddingBottom * 15px)"
-            },
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)"
-            }
-          },
-          "_name": "header1",
-          "_customHTML": "<section class=\"header1\" group=\"Headers\" plugins=\"amp-main\" mbr-class=\"{'mbr-fullscreen': fullScreen}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubTitle\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked>\n\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background3.jpg\" selected>\n            <input type=\"color\" title=\"Background Color\" value=\"#886586\">\n        </fieldset>\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <h1 class=\"mbr-section-title mbr-fonts-style align-center mbr-bold\" mbr-theme-style=\"display-1\" data-app-selector=\".mbr-section-title\" mbr-if=\"showTitle\">Google AMP</h1>\n        <h3 class=\"mbr-section-subtitle mbr-fonts-style align-center\" mbr-theme-style=\"display-2\" data-app-selector=\".mbr-section-subtitle\" mbr-if=\"showSubTitle\">AMP PROVIDES A GREAT USER EXPERIENCE ACROSS MANY PLATFORMS</h3>\n        <p class=\"mbr-fonts-style mbr-text align-center\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text, .mbr-section-btn\" mbr-if=\"showText\">Full width intro with adjustable height, background image. Click any text to edit or style it.</p>\n        <div class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-4\">\n            <a class=\"btn btn-md btn-primary\" href=\"https://mobirise.com\">LEARN MORE</a>\n        </div>\n    </div>\n\n</section>",
-          "_cid": "qDA661ZGLI",
-          "_anchor": "header1-0",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
-        },
         {
           "_styles": {
             "amp-sidebar": {
@@ -237,12 +215,115 @@
           },
           "_name": "menu1",
           "_customHTML": "<section class=\"menu\" group=\"Menu\" plugins=\"amp-main,amp-sidebar\" global=\"\" once=\"menu\" always-top=\"\" position-absolute=\"\">\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Show Logo\" name=\"showLogo\" checked=\"\">\n        <input type=\"range\" title=\"Logo Height\" inline=\"\" name=\"logoHeight\" min=\"55\" max=\"120\" value=\"55\" step=\"1\">\n        <input type=\"range\" title=\"Logo Width\" inline=\"\" name=\"logoWidth\" min=\"55\" max=\"120\" value=\"55\" step=\"1\">\n\n        <input type=\"checkbox\" title=\"Show Brand Name\" name=\"showBrand\" checked=\"\">\n        <input type=\"checkbox\" title=\"Show Links\" name=\"showLinks\" checked=\"\">\n        <input type=\"checkbox\" title=\"Show Button(s)\" name=\"showButtons\" checked=\"\">\n        <input type=\"checkbox\" title=\"Sticky\" name=\"sticky\" checked=\"\">\n        <select title=\"Sidebar Side\" name=\"sidebarSide\">\n            <option value=\"left\">Left</option>\n            <option value=\"right\" selected=\"\">Right</option>\n        </select>\n        <input type=\"color\" title=\"Background Color\" name=\"menuBgColor\" value=\"#15181b\">\n        <input type=\"color\" title=\"Hamburger Color\" name=\"hamburgerColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    <nav class=\"headerbar\" mbr-class=\"{'sticky-nav':sticky}\">\n      <div class=\"brand\">\n          <span mbr-if=\"showLogo\" class=\"brand-logo\">\n              <amp-img src=\"../_images/logo1.png\" layout=\"responsive\" width=\"16\" height=\"9\" alt=\"a sample image\">\n                  <img class=\"mbr-temp\" src=\"../_images/logo1.png\" alt=\"Mobirise\">\n              </amp-img>\n          </span>\n          <p mbr-text=\"\" mbr-theme-style=\"display-2\" mbr-if=\"showBrand\" class=\"brand-name mbr-fonts-style\" data-app-selector=\".brand-name\">Mobirise AMP</p>\n      </div>\n    </nav>\n    <amp-sidebar id=\"sidebar\" layout=\"nodisplay\" side=\"{{sidebarSide}}\">\n        <div class=\"builder-sidebar\" id=\"builder-sidebar\">\n            <button on=\"tap:sidebar.close\" class=\"close-sidebar\">\n                <span></span>\n                <span></span>\n            </button>\n\n            <div mbr-menu=\"\" class=\"sidebar mbr-white\" mbr-theme-style=\"display-7\" mbr-if=\"showLinks\">\n              <a class=\"text-white\" href=\"https://mobirise.com\">Example 1</a>\n              <a class=\"text-white\" href=\"https://mobirise.com\">Example 2</a>\n              <a class=\"text-white\" href=\"https://mobirise.com\">Example 3</a>\n            </div>\n            \n            <div mbr-if=\"showButtons\" mbr-buttons=\"\" mbr-theme-style=\"display-4\" class=\"navbar-buttons mbr-section-btn align-center\">\n              <a class=\"btn btn-sm btn-primary\" href=\"https://mobirise.com\">BTN EXAMPLE</a>\n            </div>\n        </div>\n    </amp-sidebar>\n    <button on=\"tap:sidebar.toggle\" class=\"ampstart-btn hamburger\" mbr-class=\"{'sticky-but':sticky}\">\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n    </button>\n</section>\n",
-          "_cid": "qDAMVFH4gm",
-          "_anchor": "menu1-9",
+          "_cid": "qDBbx18ZXF",
           "_protectedParams": [],
           "_global": true,
           "_once": "menu",
-          "_params": {}
+          "_params": {},
+          "_anchor": "menu1-x"
+        },
+        {
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            }
+          },
+          "_name": "header1",
+          "_customHTML": "<section class=\"header1\" group=\"Headers\" plugins=\"amp-main\" mbr-class=\"{'mbr-fullscreen': fullScreen}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked=\"\">\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked=\"\">\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubTitle\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked=\"\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked=\"\">\n\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background3.jpg\" selected=\"\">\n            <input type=\"color\" title=\"Background Color\" value=\"#886586\">\n        </fieldset>\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <h1 class=\"mbr-section-title mbr-fonts-style align-center mbr-bold\" mbr-theme-style=\"display-1\" data-app-selector=\".mbr-section-title\" mbr-if=\"showTitle\">Google AMP</h1>\n        <h3 class=\"mbr-section-subtitle mbr-fonts-style align-center\" mbr-theme-style=\"display-2\" data-app-selector=\".mbr-section-subtitle\" mbr-if=\"showSubTitle\">AMP PROVIDES A GREAT USER EXPERIENCE ACROSS MANY PLATFORMS</h3>\n        <p class=\"mbr-fonts-style mbr-text align-center\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text, .mbr-section-btn\" mbr-if=\"showText\">Full width intro with adjustable height, background image. Click any text to edit or style it.</p>\n        <div class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons=\"\" mbr-theme-style=\"display-4\">\n            <a class=\"btn btn-md btn-primary\" href=\"https://mobirise.com\">LEARN MORE</a>\n        </div>\n    </div>\n\n</section>",
+          "_cid": "qDBbwLBwfF",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "header1-w"
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".google-map": {
+              "height": "25rem",
+              "position": "relative",
+              "width": "100%",
+              "iframe": {
+                "height": "100%",
+                "width": "100%"
+              },
+              "[data-state-details]": {
+                "color": "#6b6763",
+                "font-family": "Montserrat",
+                "height": "1.5em",
+                "margin-top": "-0.75em",
+                "padding-left": "1.25rem",
+                "padding-right": "1.25rem",
+                "position": "absolute",
+                "text-align": "center",
+                "top": "50%",
+                "width": "100%"
+              },
+              "&[data-state]": {
+                "background": "#e9e5dc"
+              },
+              "&[data-state=\"loading\"]": {
+                "[data-state-details]": {
+                  "display": "none"
+                }
+              }
+            }
+          },
+          "_name": "map1",
+          "_customHTML": "<section class=\"map\" group=\"Maps\" plugins=\"amp-main,amp-iframe\">\n\n    <mbr-parameters>\n    <!-- Block of parameters for component -->\n\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"6\" step=\"1\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"6\" step=\"1\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n        <input type=\"map\" title=\"Map\" name=\"googleMap\">\n        <header><b style=\"color: #ffde00; padding-right: 1rem;\">Warning!</b>The iframe must be either 600 px away from the top or not within the first 75% of the viewport. It's amp constraint. If you place it closer, the block will be moved below.</header>\n    <!-- End block of parameters -->\n    </mbr-parameters>\n    <div class=\"mbr-row mbr-justify-content-center\">\n        <div class=\"google-map\" mbr-map=\"googleMap\">\n    </div>\n</div></section>\n",
+          "_cid": "qDBbtMICJB",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "map1-t"
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".first-card-title, .second-card-title": {
+              "margin": "1rem"
+            },
+            ".first-card, .second-card": {
+              "padding": "3rem"
+            },
+            ".first-card": {
+              "background": "@firstBg"
+            },
+            ".second-card": {
+              "background": "@secondBg"
+            },
+            "@media (max-width: 767px)": {
+              ".first-card, .second-card": {
+                "padding": "1rem"
+              }
+            }
+          },
+          "_name": "content14",
+          "_customHTML": "<section class=\"content14 mbr-section\" group=\"Article\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"2\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked=\"\">\n        <select title=\"Cards\" name=\"cardsAmount\">\n            <option value=\"1\">1</option>\n            <option value=\"2\" selected=\"\">2</option>\n        </select>\n        <input type=\"color\" title=\"First Card BG Color\" name=\"firstBg\" value=\"#000000\">\n        <input type=\"color\" title=\"Second Card BG Color\" name=\"secondBg\" value=\"#ffffff\" condition=\"cardsAmount == 2\">\n\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background3.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected=\"\">\n        </fieldset>\n    <!-- End block parameters -->\n    </mbr-parameters>\n    \n    <div class=\"container\">\n        <div class=\"mbr-row mbr-justify-content-center\">\n            <div class=\"first-card mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-5\">\n                <h4 class=\"first-card-title  mbr-fonts-style align-right mbr-white\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".first-card-title\">HIGHER PERFORMANCE AND ENGAGEMENT</h4>\n                <p class=\"mbr-first-text mbr-section-title mbr-fonts-style align-right mbr-white\" mbr-theme-style=\"display-2\" mbr-if=\"showText\" data-app-selector=\".mbr-first-text\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores cum libero odio nihil, aperiam iure accusantium veritatis magnam, perspiciatis voluptatibus illo culpa obcaecati porro quasi placeat repellat impedit sequi. Dolor.</p>\n            </div>\n            \n            <div class=\"second-card mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-5\" mbr-if=\"cardsAmount > 1\">\n                <h4 class=\"second-card-title mbr-fonts-style align-left mbr-black\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".second-card-title\">FLEXIBILITY AND RESULTS</h4>\n                <p class=\"mbr-second-text mbr-text mbr-fonts-style align-left mbr-black mbr-bold\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-second-text\">\n                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis ad cum eligendi molestias. Magnam, voluptate totam sunt tempore iusto ipsa repellendus ipsam ipsum, commodi non. Adipisci neque hic asperiores, ex.</span><span>Minus dicta quidem voluptatum fuga, at praesentium vero molestias, quia quaerat natus, consectetur blanditiis qui saepe eveniet eius. Fugit laboriosam officia est maxime accusamus autem architecto eveniet tempore, consequuntur animi.</span>\n                </p>\n            </div>\n            \n        </div>\n    </div>\n</section>",
+          "_cid": "qDBbusHvbr",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "content14-v"
         },
         {
           "_styles": {
@@ -280,14 +361,14 @@
               }
             }
           },
-          "_name": "map1",
-          "_customHTML": "<section class=\"map\" group=\"Maps\" plugins=\"amp-main,amp-iframe\">\n\n    <mbr-parameters>\n    <!-- Block of parameters for component -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"6\" step=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"6\" step=\"1\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n        <input type=\"map\" title=\"Map\" name=\"googleMap\" place-id=\"ChIJW4qXTsL0-EMR1D-lpqhH5nY\" value=\"Лойма\">\n    <!-- End block of parameters -->\n    </mbr-parameters>\n\n\n    <!-- <div class=\"container\"> -->\n        <div class=\"mbr-row mbr-justify-content-center\">\n            <!-- <div class=\"mbr-col-md-12 map-box\"> -->\n                <div class=\"google-map\" mbr-map=\"googleMap\">\n           <!--  </div> -->\n        </div>\n    <!-- </div> -->\n</div></section>",
-          "_cid": "qDAWXwWfKJ",
-          "_anchor": "map1-d",
+          "_name": "map2",
+          "_customHTML": "<section class=\"map\" group=\"Maps\" plugins=\"amp-main,amp-iframe\">\n\n    <mbr-parameters>\n    <!-- Block of parameters for component -->\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"6\" step=\"1\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"6\" step=\"1\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n        <input type=\"map\" title=\"Map\" name=\"googleMap\">\n        <header><b style=\"color: #ffde00; padding-right: 1rem;\">Warning!</b>The iframe must be either 600 px away from the top or not within the first 75% of the viewport. It's amp constraint. If you place it closer, the block will be moved below.</header>\n    <!-- End block of parameters -->\n    </mbr-parameters>\n    <div class=\"container\">\n        <div class=\"mbr-row mbr-justify-content-center\">\n            <div class=\"mbr-col-md-12 map-box\">\n                <div class=\"google-map\" mbr-map=\"googleMap\">\n            </div>\n        </div>\n    </div>\n</div></section>\n",
+          "_cid": "qDBbu99I6r",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
-          "_params": {}
+          "_params": {},
+          "_anchor": "map2-u"
         }
       ]
     }
