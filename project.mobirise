@@ -28,8 +28,9 @@
     },
     "path": "@PROJECT_PATH@",
     "versionFirst": "4.5.2",
-    "uniqCompNum": 12,
-    "versionPublish": "4.5.2"
+    "uniqCompNum": 18,
+    "versionPublish": "4.5.2",
+    "screenshot": "screenshot.png"
   },
   "pages": {
     "index.html": {
@@ -44,50 +45,32 @@
       "components": [
         {
           "_styles": {
-            "padding-top": "(@paddingTop * 15px)",
-            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
             "& when (@bg-type = 'color')": {
               "background-color": "@bg-value"
             },
             "& when (@bg-type = 'image')": {
               "background-image": "url(@bg-value)"
             },
-            ".carousel-img": {
+            ".mbr-section-btn": {
+              "margin-bottom": "20px"
+            },
+            "amp-img": {
               "width": "100%",
               "text-align": "center",
-              "display": "flex",
-              "justify-content": "center",
-              "align-items": "center"
-            },
-            ".amp-carousel-button": {
-              "width": "50px",
-              "height": "50px",
-              "border-radius": "50%"
-            },
-            ".mbr-section-title": {
-              "& when not (@showSubTitle)": {
-                "padding-bottom": "2rem"
-              }
-            },
-            ".wrapper": {
-              "position": "relative",
-              "width": "100%",
-              "height": "100%"
-            },
-            "img.mbr-temp": {
-              "width": "100%",
-              "height": "100%",
-              "object-fit": "cover"
-            },
-            "amp-carousel": {
-              "height": "600px",
-              "margin-bottom": "-20px"
+              "margin": "0 auto",
+              "max-width": "~'@{imageWidth}%'"
             }
           },
-          "_name": "slider5",
-          "_customHTML": "<section class=\"slider5 slider\" group=\"Carousels &amp; Sliders\" plugins=\"amp-main,amp-carousel\" mbr-class=\"{'mbr-fullscreen': fullScreen}\">\n\n    <mbr-parameters>\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n    \n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\">\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubTitle\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <input type=\"checkbox\" title=\"Autoplay\" name=\"autoplay\">\n        <input type=\"range\" inline=\"\" title=\"Delay\" name=\"delay\" min=\"1000\" max=\"5000\" step=\"1000\" value=\"3000\" condition=\"autoplay\">\n        <select title=\"Images\" name=\"imagesAmount\">\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\">4</option>\n            <option value=\"5\">5</option>\n            <option value=\"6\" selected=\"\">6</option>\n        </select>\n\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background3.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#767676\" selected=\"\">\n        </fieldset>\n    <!-- End block parameters -->\n    </mbr-parameters>\n        <div class=\"wrapper\">\n            <div class=\"slider-box\" data-autoplay=\"{{autoplay}}\" data-delay=\"{{delay}}\">\n            <amp-carousel class=\"carousel\" height=\"9\" width=\"16\" layout=\"responsive\" type=\"slides\" loop=\"\">\n                <amp-img class=\"carousel-img\" src=\"@PROJECT_PATH@/assets/images/01.jpg\" height=\"9\" width=\"13.5\" layout=\"responsive\" alt=\"a sample image\"><img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/01.jpg\" alt=\"Mobirise\"></amp-img>\n                <amp-img class=\"carousel-img\" src=\"@PROJECT_PATH@/assets/images/02.jpg\" mbr-class=\"{'super-hide': imagesAmount < 2}\" height=\"9\" width=\"13.5\" layout=\"responsive\" alt=\"another sample image\"><img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/02.jpg\" alt=\"Mobirise\"></amp-img>\n                <amp-img class=\"carousel-img\" src=\"@PROJECT_PATH@/assets/images/03.jpg\" mbr-class=\"{'super-hide': imagesAmount < 3}\" height=\"9\" width=\"13.5\" layout=\"responsive\" alt=\"and another sample image\"><img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/03.jpg\" alt=\"Mobirise\"></amp-img>\n                <amp-img class=\"carousel-img\" src=\"@PROJECT_PATH@/assets/images/04.jpg\" mbr-class=\"{'super-hide': imagesAmount < 4}\" height=\"9\" width=\"13.5\" layout=\"responsive\" alt=\"a sample image\"><img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/04.jpg\" alt=\"Mobirise\"></amp-img>\n                <amp-img class=\"carousel-img\" src=\"@PROJECT_PATH@/assets/images/05.jpg\" mbr-class=\"{'super-hide': imagesAmount < 5}\" height=\"9\" width=\"13.5\" layout=\"responsive\" alt=\"another sample image\"><img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/05.jpg\" alt=\"Mobirise\"></amp-img>\n                <amp-img class=\"carousel-img\" src=\"@PROJECT_PATH@/assets/images/06.jpg\" mbr-class=\"{'super-hide': imagesAmount < 6}\" height=\"9\" width=\"13.5\" layout=\"responsive\" alt=\"and another sample image\"><img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/06.jpg\" alt=\"Mobirise\"></amp-img>  \n                </amp-carousel>\n            </div>\n        </div>\n   \n </section>",
-          "_cid": "qF4UtQZ3Aj",
-          "_anchor": "slider5-b",
+          "_name": "header2",
+          "_customHTML": "<section class=\"header2\" group=\"Headers\" plugins=\"amp-main\" mbr-class=\"{'mbr-fullscreen': fullScreen}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Image Width\" name=\"imageWidth\" min=\"0\" max=\"100\" step=\"1\" value=\"80\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked>\n\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background3.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#efefef\" selected>\n        </fieldset>\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <div class=\"mbr-row mbr-justify-content-center\">\n            <div class=\"mbr-col-lg-8\">\n                <h1 class=\"mbr-fonts-style align-center mbr-bold\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\">\n                    Mobirise AMP\n                </h1>\n                <h3 class=\"mbr-fonts-style align-center\" mbr-if=\"showSubTitle\" mbr-theme-style=\"display-5\">\n                    ACCELERATED MOBILE PAGES BY GOOGLE\n                </h3>\n                <div class=\"mbr-text align-center\">\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-if=\"showText\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod at id fugiat natus a voluptas eveniet officia iure nihil nostrum ad, modi ipsam, dicta ullam accusamus, voluptate aspernatur. Accusamus, aliquid?\n                    </p>\n                </div>\n                <div class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-4\">\n                    <a class=\"btn btn-md btn-primary\" href=\"https://mobirise.com\">LEARN MORE</a>\n                </div>\n                \n                <amp-img src=\"@PROJECT_PATH@/assets/images/background8.jpg\"  width=\"584\" height=\"438\" layout=\"responsive\">\n                    <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/background8.jpg\" alt title>\n                </amp-img>\n            </div>\n        </div>\n    </div>\n\n</section>",
+          "_cid": "qF4ZizrWcE",
+          "_anchor": "header2-h",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
           "_protectedParams": [],
           "_global": false,
           "_once": false,
