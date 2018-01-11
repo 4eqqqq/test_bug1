@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "blackAMP",
-    "currentPage": "footers.html",
+    "currentPage": "index.html",
     "theme": {
       "name": "blackamp",
       "title": "BlackAMP",
