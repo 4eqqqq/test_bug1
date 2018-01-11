@@ -29,12 +29,13 @@
     "favicon": "",
     "noImageResize": "",
     "cookiesAlert": "",
-    "google-analytics": "<amp-analytics type=\"googleanalytics\" id=\"analytics1\">\r\n<script type=\"application/json\">\r\n{\r\n  \"vars\": {\r\n    \"account\": \"UA-XXXXX-Y\"\r\n  },\r\n  \"triggers\": {\r\n    \"trackPageview\": {\r\n      \"on\": \"visible\",\r\n      \"request\": \"pageview\"\r\n    }\r\n  }\r\n}\r\n</script>\r\n</amp-analytics>",
+    "google-analytics": "<amp-analytics type=\"googleanalytics\" id=\"analytics1\">\r\n<script type=\"application/json\">\r\n{\r\n  \"vars\": {\r\n    \"account\": \"UA-112315769-1\"\r\n  },\r\n  \"triggers\": {\r\n    \"trackPageview\": {\r\n      \"on\": \"visible\",\r\n      \"request\": \"pageview\"\r\n    }\r\n  }\r\n}\r\n</script>\r\n</amp-analytics>",
     "siteUrl": "undefined",
     "versionFirst": "4.5.4",
     "uniqCompNum": 4,
     "versionPublish": "4.5.4",
-    "path": "@PROJECT_PATH@"
+    "path": "@PROJECT_PATH@",
+    "screenshot": "screenshot.png"
   },
   "pages": {
     "index.html": {
